@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Financial Report Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f8fc;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeInBody 1.2s ease-in;
+    }
+
+    .header-banner {
+      background-color: #ffd6e8; /* Baby pink */
+      padding: 30px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      animation: fadeInBody 1.2s ease-in;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 0;
+      color: #333;
+      font-weight: 800;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 500px;
+      animation: fadeInForm 1s ease;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      background-color: #fafafa;
+      transition: border-color 0.3s;
+    }
+
+    input[type="file"]:hover {
+      border-color: #999;
+    }
+
+    button {
+      background-color: #862e73;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #862e73;
+      transform: scale(1.03);
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInForm {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Baby Pink Header Section -->
+  <div class="header-banner">
+    <h1>📊 Financial Report Generator</h1>
+  </div>
+
+  <!-- Generate Financial Report -->
+  <form action="/generate" method="post" enctype="multipart/form-data">
+    <label for="generate_file">Choose a file:</label>
+    <input type="file" id="generate_file" name="financial_file" accept=".txt" required>
+    <button type="submit">Generate Report</button>
+  </form>
+
+  <!-- Summarize Financial Report -->
+  <form action="/summarize" method="post" enctype="multipart/form-data">
+    <label for="summarize_file">Choose a file:</label>
+    <input type="file" id="summarize_file" name="financial_file" accept=".txt" required>
+    <button type="submit">Summarize Report</button>
+  </form>
+
+</body>
+</html>

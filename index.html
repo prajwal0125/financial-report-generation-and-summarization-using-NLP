@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Report Generator</title>
+</head>
+<body>
+    <h1>Upload Financial Report</h1>
+    <form action="/generate" method="post" enctype="multipart/form-data">
+        <label for="financial_file">Choose a file:</label>
+        <input type="file" id="financial_file" name="financial_file" accept=".txt,.csv,.pdf" required>
+        <button type="submit">Generate Report</button>
+    </form>
+
+    <h2>Summarize Financial Report</h2>
+    <form action="/summarize" method="post" enctype="multipart/form-data">
+        <label for="financial_file">Choose a file:</label>
+        <input type="file" id="financial_file" name="financial_file" accept=".txt,.csv,.pdf" required>
+        <button type="submit">Summarize Report</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+Company: Example Corp
+Quarter: Q4 2024
+
+Revenue: 1,200,000
+Cost of Goods Sold: 700,000
+Gross Profit: 500,000
+
+Operating Expenses:
+  - Salaries: 150,000
+  - Rent: 50,000
+  - Utilities: 10,000
+  - Marketing: 30,000
+
+Operating Income: 260,000
+Interest Expense: 20,000
+Tax: 48,000
+
+Net Income: 192,000
