@@ -49,7 +49,7 @@ financial-report-generatation-and-summarization-using-NLP/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/Bhoomikapm0116/financial-report-generatation-and-summarization-using-NLP.git
+git clone https://github.com/Prajwal0125/financial-report-generatation-and-summarization-using-NLP.git
 cd financial-report-generatation-and-summarization-using-NLP
 ```
 
